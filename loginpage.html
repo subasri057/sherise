@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .loginform{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://opentextbc.ca/womenintheworld/wp-content/uploads/sites/183/2017/04/26-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -1;} 
+  
+  /* Login Container */
+  .login-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  .login-container h3 {
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color:white;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background:black;
+  }
+  
+  /* Signup Link */
+  .signup-link {
+    margin-top: 1rem;
+    color:white;
+  }
+  
+  .signup-link a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Message */
+  .message {
+    margin-top: 1rem;
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="loginform">
+     
+        <div class="login-container">
+          <h2>SHE RISE</h2>
+          <h3>LOGIN</h3>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+          </form>
+          <div id="message" class="message"></div>
+        </div>
+      
+       </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('login-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Get input values
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                // Simple validation
+                if (!email || !password) {
+                    showMessage('Please fill in all fields.', 'error');
+                    return;
+                }
+
+                // Simulate login (replace with actual API call)
+                if (email === 'subasrii057@gmail.com' && password === 'password123') {
+                    showMessage('Login successful! Redirecting...', 'success');
+                    setTimeout(() => {
+                        window.location.href = 'sherise.html'; // Redirect to home page
+                    }, 2000);
+                } else {
+                    showMessage('Invalid email or password.', 'error');
+                }
+            });
+
+            // Function to display messages
+            function showMessage(message, type) {
+                const messageDiv = document.getElementById('message');
+                messageDiv.textContent = message;
+                messageDiv.className = `message ${type}`; // Add class for styling
+            }
+        });
+    </script>
+</body>
+</html>
+   
+
+  

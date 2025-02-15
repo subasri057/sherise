@@ -1,0 +1,249 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: rgba(0, 0, 0, 0.7);
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+    background-image: url('https://opentextbc.ca/womenintheworld/wp-content/uploads/sites/183/2017/04/26-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -1; 
+   
+    
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    color: #f4f4f4;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.course-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+    
+}
+
+.course {
+  
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.course img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color:white;
+}
+
+iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course {
+        width: 85%;
+    }
+}
+
+@media (max-width: 480px) {
+    .course {
+        width: 100%;
+    }
+}
+
+.course, .test {
+   
+    padding: 20px;
+    border-radius: 10px;
+   
+    width: 30%;
+}
+
+iframe {
+    border-radius: 10px;
+   
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.accomplishment-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    margin-bottom: 10px;
+}
+
+.accomplishment {
+
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.accomplishment img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.accomplishment h3 {
+    font-size: 1.5rem;
+
+    color: white;
+}
+
+.accomplishment p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.progress {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.progress .status {
+    display: block;
+    font-weight: bold;
+    color: #28a745; /* Green for completed */
+}
+
+.progress .certificate {
+    display: block;
+    color: #28a745; /* Blue for certificate */
+}
+
+.progress .score {
+    display: block;
+    color: #ffc107; /* Yellow for score */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .accomplishment {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .accomplishment {
+        width: 100%;
+    }
+}
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between videos */
+    padding: 20px;
+}
+.course {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course iframe {
+    width: 100%;
+    height: 200px; /* Fixed height for all videos */
+    border-radius: 10px;
+}
+
+.course  h3 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #333;
+}
